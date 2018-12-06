@@ -142,6 +142,7 @@ public class EmbeddedStackWalkTest {
                  .forEach(f -> {
                     assertEquals(f.getFileName(), fileName);
                     int line = f.getLineNumber();
+                    System.out.println("BW line : " + line);
                     assertTrue(line >= BEGIN_LINE && line <= END_LINE);
 
                     StackTraceElement st = f.toStackTraceElement();
